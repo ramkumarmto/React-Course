@@ -1,0 +1,5 @@
+node_modules/
+.parcel-cache/
+dist/
+# what is / indicates ?
+# This ensures that only folders and its contents are ignored, and not any files or folders with similar names.
