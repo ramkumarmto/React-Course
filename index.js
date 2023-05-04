@@ -1,33 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// const h2 = React.createElement(
-//   "h2",
-//   {},
-//   "Welcome to The Ram Kumar utube channel!"
-// );
+// functional comp
+// class components
 
+function Navbar (){
+  return(
+    <h1>Navbar comp</h1>
+  )
+}
+function Footer (){
+  return (
+    <p>Footer Componet</p>
+  )
+}
 
-//   <!-- <div class="container">
-//     <div class="innerContainer">
-//       <h2>Hello world!</h2>
-//       <p>Hello world from para!</p>
-//     </div>
-//   </div> -->
-
-const myname = "ram Kumar";
-
-const myJsx = <div className="innerContainer">
-     <h2>Hello world! { 5 + 7 }</h2>
-      <p>Hello world from para! {myname}</p>
+const HomePage = ()=>{
+  return(
+    <div>
+      <Navbar />
+    <h2>first react component ever</h2>
+    <Footer />
+    {/* <Footer></Footer>
+    <Footer />
+    {Navbar()} */}
     </div>
+  )
+}
 
 
-
-
-const result = React.createElement("div", { className: "innerContainer" }, [React.createElement("h2", {}, "Hello World"), React.createElement("p", {}, "Hello from para")])
 
 const container = ReactDOM.createRoot(document.getElementById("container"));
-container.render(myJsx);
+container.render(<HomePage />);
 
 
