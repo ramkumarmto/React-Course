@@ -17,14 +17,12 @@ function Footer (){
 
 const HomePage = ()=>{
   return(
-    <div>
+    <>
       <Navbar />
     <h2>first react component ever</h2>
     <Footer />
-    {/* <Footer></Footer>
-    <Footer />
-    {Navbar()} */}
-    </div>
+   
+    </>
   )
 }
 
