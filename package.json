@@ -8,7 +8,7 @@
   "description": "this is a react course from very basics",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "npx parcel src/index.html"
+    "start" : "npx parcel index.html"
   },
   "author": "Ram Kumar",
   "license": "ISC",
