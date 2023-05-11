@@ -1,8 +1,6 @@
+import HomePage from "./src/components/HomePage";
 
-import HomePage from "./src/components/HomePage"
-const App = ()=>{
-    return (
-<HomePage />
-    )
-}
+const App = () => {
+  return <HomePage />;
+};
 export default App;
