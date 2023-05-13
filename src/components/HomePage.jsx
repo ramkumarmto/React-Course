@@ -1,8 +1,8 @@
 
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import ProductCard from "./ProductCard";
+
 
 
 
@@ -14,62 +14,16 @@ const HomePage = ()=>{
       <h2>-- Our Products -- </h2>
       </div>
     <div style={{ display : 'flex', flexWrap : "wrap", margin : 25}}>
-    <Card style={{ width: '18rem', margin : 5, padding : 5 }}>
-      <Card.Img variant="top" src="https://picsum.photos/200/100" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
 
-    </Card>
-    <Card style={{ width: '18rem' , margin : 5, padding : 5}}>
-      <Card.Img variant="top" src="https://picsum.photos/200/100" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' , margin : 5, padding : 5}}>
-      <Card.Img variant="top" src="https://picsum.photos/200/100" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' , margin : 5, padding : 5}}>
-      <Card.Img variant="top" src="https://picsum.photos/200/100" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' , margin : 5, padding : 5 }}>
-      <Card.Img variant="top" src="https://picsum.photos/200/100" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+      <ProductCard title="Macbook M2"  image= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm_MFWtTWkLOa1fsHFdBhKWsMM1e7Y5TyGgA&usqp=CAU"/>
+      <ProductCard  title="HP laptop" image ="https://thumbs.dreamstime.com/b/black-hp-laptop-wooden-table-office-equipment-black-hp-laptop-wooden-table-jakarta-indonesia-199401268.jpg"/>
+      <ProductCard  title="iPhome 14" image="https://cdn.dxomark.com/wp-content/uploads/medias/post-126771/Apple-iPhone-14-Pro_FINAL_featured-image-packshot-review-1.jpg" />
+      <ProductCard  title="Nova Trimmer" image="https://cdn1.smartprix.com/rx-iFHbfJeXQ-w1200-h1200/FHbfJeXQ.jpg" />
+      
+    
+     
+   
+   
 
     </div>
     <Footer />
