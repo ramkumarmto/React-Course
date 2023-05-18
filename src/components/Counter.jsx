@@ -5,10 +5,11 @@ import Card from "react-bootstrap/Card";
 function Counter() {
   const [number, setNumber] = useState(0);
   const [showCounter, setshowCounter] = useState(true)
-  // console.log(myNumber)
+
 
   const incHandler = ()=>{
     setNumber(number + 5)
+   
   }
 
   function decHandler(){
