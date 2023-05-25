@@ -4,8 +4,8 @@ import HomePage from './components/HomePage';
 const App = () => {
   return (
     <>
-    {/* <HomePage /> */}
-    <Counter />
+    <HomePage />
+    {/* <Counter /> */}
     </>
   )
 };
