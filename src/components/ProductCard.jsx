@@ -13,7 +13,7 @@ function ProductCard(props) {
       <Card.Text>
       {props.description}
       </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
+      <Button variant="primary">Add To cart</Button>
     </Card.Body>
 
   </Card>

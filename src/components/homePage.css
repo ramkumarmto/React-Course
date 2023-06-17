@@ -1,0 +1,18 @@
+
+
+.search-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search-container input{
+    width: 500px;
+    padding: 7px 12px;
+    border-radius: 14px;
+    border-color: 1px solid lightblue;
+}
+.search-container input:focus{
+    outline: none;
+}

@@ -3,11 +3,13 @@ import Footer from "./Footer";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./homePage.css"
 
 
 
 const HomePage = () => {
   const [ ourProducts, setOurProducts ] = useState([])
+  const [searchedProduct, setsearchedproducts] = useState("")
 
   const getproducts = async()=>{
    const products = await axios.get("https://dummyjson.com/products")
@@ -15,7 +17,7 @@ const HomePage = () => {
    setOurProducts(products.data.products)
   }
 
-  console.log(ourProducts)
+  // console.log(ourProducts)
  
 
   useEffect(()=>{
@@ -24,6 +26,16 @@ const HomePage = () => {
     // component did mount
  
   },[])
+
+  const filterProducthandler = (event)=>{
+    setsearchedproducts(event.target.value)
+  }
+
+
+  const filteredProducts = ourProducts.filter((product, index) => product.title.toLowerCase().includes(searchedProduct.toLowerCase()))
+
+
+  console.log(filteredProducts)
 
   return (
     <>
@@ -39,8 +51,13 @@ const HomePage = () => {
       >
         <h2>-- Our Products -- </h2>
       </div>
+
+       {/* search bar  */}
+       <div className="search-container">
+        <input type="text" placeholder="Search Products..." onChange={filterProducthandler} />
+       </div>
       <div style={{ display: "flex", flexWrap: "wrap", margin: 25 }}>
-        {ourProducts.map((product, index) => (
+        {filteredProducts.map((product, index) => (
           <ProductCard key={product.id} title={product.title} image={product.images[0]} description={product.description}/>
         ))}
       </div>
