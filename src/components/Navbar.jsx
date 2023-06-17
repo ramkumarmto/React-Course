@@ -8,7 +8,7 @@ export function Navbar() {
     <>
       <div className="navbar_container">
         <ul>
-          <li style={{ fontSize: 24, color: "tomato" }}><NavLink  >SHOPPING APP</NavLink></li>
+          <li style={{ fontSize: 24,}}><NavLink style={{ color : 'tomato'}} >SHOPPING APP</NavLink></li>
           <li><NavLink className={({isActive}) => isActive  ? "active-class" : null} to="/">All Products</NavLink></li>
           <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/featured-products">Featured Products</NavLink></li>
           <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/contact">Contact</NavLink></li>
