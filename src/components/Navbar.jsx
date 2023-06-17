@@ -1,20 +1,21 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Navbar from "react-bootstrap/Navbar";
+import "./navbar.css";
+import { Link , NavLink} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-export function Navbar (){
-    return(
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">My React App</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">About</Nav.Link>
-            <Nav.Link href="#pricing">Contact</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-    )
-  }
-//   export default Navbar
+export function Navbar() {
+  return (
+    <>
+      <div className="navbar_container">
+        <ul>
+          <li style={{ fontSize: 24, color: "tomato" }}><NavLink  >SHOPPING APP</NavLink></li>
+          <li><NavLink className={({isActive}) => isActive  ? "active-class" : null} to="/">All Products</NavLink></li>
+          <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/featured-products">Featured Products</NavLink></li>
+          <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/contact">Contact</NavLink></li>
+        </ul>
+      </div>
+      <Outlet />
+    </>
+  );
+}
+// export default Navbar
