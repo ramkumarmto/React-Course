@@ -1,30 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { countAction } from "../store";
+import { useDispatch, useSelector } from "react-redux";
 
 function Counter() {
-  const [number, setNumber] = useState(0);
-  const [showCounter, setshowCounter] = useState(true)
+  const dispatch = useDispatch()
+ const number =  useSelector((state)=> state.counter.count);
+ const showNumber =  useSelector((state)=> state.counter.showCount);
+ console.log(number)
+
 
 
   const incHandler = ()=>{
-    setNumber(number + 5)
+    dispatch(countAction.increase())
+   
    
   }
 
   function decHandler(){
-    setNumber(number - 1)
+    dispatch(countAction.decrease())
   }
 
   function resetHandler (){
-    setNumber(0)
+    dispatch(countAction.reset())
   }
 
   function togglehandler(){
-    setshowCounter((prevValue)=> !prevValue);
+    dispatch(countAction.toggle())
+    
   }
 
-  console.log("hellow!")
   return (
     <div
       style={{
@@ -45,7 +51,7 @@ function Counter() {
               width: "100%",
             }}
           >
-            { showCounter ? <h2 className="text-danger">{number}</h2> : null}
+            { showNumber && <h2 className="text-danger">{number}</h2> }
           </div>
 
           <div
