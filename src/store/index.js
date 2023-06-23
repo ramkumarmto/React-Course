@@ -24,11 +24,35 @@ const countSlice = createSlice({
     }
 })
 
+const cartSlice = createSlice({
+    name : "cart",
+    initialState : {
+        badgeNumber : 0,
+        cartItems : []
+    },
+    reducers : {
+        addToCart(state, action){
+            // console.log(action.payload)
+         const itemExist =   state.cartItems.find((item) => item.id === action.payload.id)
+
+         if(itemExist){
+            alert("item allready aaded into cart!")
+         } else{
+            state.cartItems.push(action.payload);
+            state.badgeNumber = state.cartItems.length;
+            alert("item added to cart!")
+         }
+
+        }
+    }
+})
+
 export const countAction = countSlice.actions;
+export const cartAction = cartSlice.actions;
 
 
 
 
 export const store = configureStore({
-    reducer: { counter : countSlice.reducer}
+    reducer: { counter : countSlice.reducer, cart : cartSlice.reducer }
 })

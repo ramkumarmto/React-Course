@@ -3,10 +3,18 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import { cartAction } from '../store/index';
+import { useDispatch } from 'react-redux';
 
 
 function ProductCard(props) {
-    // console.log(props)
+  const dispatch = useDispatch()
+
+
+  const addToCarthandler = (product)=>{
+dispatch(cartAction.addToCart(product))
+  }
+    
   return (
     <Card style={{ width: '18rem', margin : 5, padding : 5 }}>
   <Link to={`/product-details/${props.id}`}> <Card.Img variant="top" src={props.image} height={200} /></Link>
@@ -15,7 +23,7 @@ function ProductCard(props) {
       <Card.Text>
       {props.description}
       </Card.Text>
-      <Button variant="primary">Add To cart</Button>
+      <Button variant="primary" onClick={()=> addToCarthandler(props)} >Add To cart</Button>
     </Card.Body>
 
   </Card>

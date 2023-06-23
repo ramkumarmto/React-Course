@@ -35,7 +35,7 @@ const HomePage = () => {
   const filteredProducts = ourProducts.filter((product, index) => product.title.toLowerCase().includes(searchedProduct.toLowerCase()))
 
 
-  console.log(filteredProducts)
+
 
   return (
     <>

@@ -3,6 +3,8 @@
     width: 100%;
     height: 70px;
     background-color: #5c5b5a;
+    display: flex;
+    justify-content: space-between;
 
 }
 .navbar_container ul {

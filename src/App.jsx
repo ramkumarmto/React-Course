@@ -6,6 +6,7 @@ import Featuredproducts from "./components/Featuredproducts";
 import ErrorComponent from "./components/ErrorComponent";
 import { Navbar } from "./components/Navbar";
 import ProductDetails from "./components/ProductDetails";
+import Cart from "./components/Cart";
 
 const Router = createBrowserRouter([
   { path: "/", element: <Navbar />, errorElement: <ErrorComponent />, children : [
@@ -14,6 +15,7 @@ const Router = createBrowserRouter([
     { path: "/featured-products", element: <Featuredproducts /> },
     { path: "/product-details/:productId", element: <ProductDetails /> },
     { path: "/counter", element: <Counter /> },
+    { path: "/cart", element: <Cart /> },
   ] },
   
 ]);
