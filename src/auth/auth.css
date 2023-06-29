@@ -1,0 +1,52 @@
+
+:root {
+    --navbar-height : 70px;
+}
+
+.auth-container{
+    width: 100%;
+    height : calc(100vh - var(--navbar-height));
+    background: linear-gradient(to bottom right, #3494E6, #EC6EAD);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.auth_inner_container{
+    /* border: 2px solid lightgray; */
+    padding: 20px;
+    width : 30%;
+    background-color: white;
+    border-radius: 5px;
+}
+.auth_inner_container h2{
+    text-align: center;
+    font-size: 20px ;
+    color: rgb(104, 99, 99);
+}
+.auth_inner_container input {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: gray;
+}
+.auth_inner_container input:focus{
+    outline: none;
+} 
+.auth_inner_container button{
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to bottom right, #3494E6, #EC6EAD);
+    border: none;
+    padding: 7px 10px 7px 10px;
+    color: white;
+} 
+.auth_inner_container p{
+text-align: center;
+font-size: 14px;
+color: gray;
+}
+.auth_inner_container p:nth-child(1){
+    margin-top: 15px;
+}

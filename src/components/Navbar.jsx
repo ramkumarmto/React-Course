@@ -18,6 +18,8 @@ export function Navbar() {
         </ul>
 
         <ul>
+        <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/signin">SignIn</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/signup">Signup</NavLink></li>
         <li><NavLink className={({isActive}) => isActive  ? "active-class" : null}  to="/cart">Cart-{number}</NavLink></li>
         </ul>
       </div>
