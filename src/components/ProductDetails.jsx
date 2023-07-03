@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import "./productDetails.css";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
+import Button from "../resuable/Button";
 
 function ProductDetails() {
   const { productId } = useParams();
@@ -53,7 +54,8 @@ function ProductDetails() {
           <p>{pDetails.description}</p>
 
           <div>
-            <Button variant="info">Add To Cart</Button>{" "}
+            {/* <Button variant="info">Add To Cart</Button>{" "} */}
+            <Button btnName= "Add To Cart" />
           </div>
         </div>
       </div>

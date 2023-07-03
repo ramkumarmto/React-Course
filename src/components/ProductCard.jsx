@@ -1,10 +1,11 @@
 
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { cartAction } from '../store/index';
 import { useDispatch } from 'react-redux';
+import Button from '../resuable/Button';
 
 
 function ProductCard(props) {
@@ -23,7 +24,8 @@ dispatch(cartAction.addToCart(product))
       <Card.Text>
       {props.description}
       </Card.Text>
-      <Button variant="primary" onClick={()=> addToCarthandler(props)} >Add To cart</Button>
+      {/* <Button variant="primary" onClick={()=> addToCarthandler(props)} >Add To cart</Button> */}
+      <Button onClick={()=> addToCarthandler(props)} btnName= "Add To Cart" />
     </Card.Body>
 
   </Card>

@@ -5,3 +5,18 @@
     padding: 20px;
     margin: 20px;
 }
+.button{
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to bottom right, #3494E6, #EC6EAD);
+    border: none;
+    padding: 7px 10px 7px 10px;
+    color: white;
+}
+
+.card {
+    padding: 20px;
+    width : 30%;
+    background-color: white;
+    border-radius: 5px;
+}
