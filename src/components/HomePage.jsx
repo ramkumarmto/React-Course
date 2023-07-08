@@ -46,6 +46,7 @@ const HomePage = () => {
           justifyContent: "center",
           alignItems: "center",
           marginTop: 20,
+          
         }}
       >
         <h2>-- Our Products -- </h2>
@@ -55,7 +56,7 @@ const HomePage = () => {
        <div className="search-container">
         <input type="text" placeholder="Search Products..." onChange={filterProducthandler} />
        </div>
-      <div style={{ display: "flex", flexWrap: "wrap", margin: 25 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", margin: 10, width : '100%', justifyContent : 'center' }}>
         {filteredProducts.map((product, index) => (
           <ProductCard key={product.id} id={product.id} title={product.title} image={product.images[0]} description={product.description}/>
         ))}

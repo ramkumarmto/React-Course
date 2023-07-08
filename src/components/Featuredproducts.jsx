@@ -49,7 +49,7 @@ const Featuredproducts = () => {
       </div>
 
       
-      <div style={{ display: "flex", flexWrap: "wrap", margin: 25 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", margin: 10, width : '100%', justifyContent : 'center' }}>
         {filteredProducts.map((product, index) => (
           <ProductCard key={product.id}  id={product.id} title={product.title} image={product.images[0]} description={product.description}/>
         ))}
