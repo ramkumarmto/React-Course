@@ -12,21 +12,14 @@ const Featuredproducts = () => {
 
   const getproducts = async()=>{
    const products = await axios.get("https://dummyjson.com/products")
-  //  console.log(products.data.products)
    setOurProducts(products.data.products)
   }
-
-  // console.log(ourProducts)
- 
 
   useEffect(()=>{
 
     getproducts()
-    // component did mount
  
   },[])
-
-  
 
 
   const filteredProducts = ourProducts.filter((product, index) => product.rating >= 4.5)

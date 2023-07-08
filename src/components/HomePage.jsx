@@ -8,22 +8,18 @@ import "./homePage.css"
 
 
 const HomePage = () => {
-  const [ ourProducts, setOurProducts ] = useState([])
-  const [searchedProduct, setsearchedproducts] = useState("")
+  const [ ourProducts, setOurProducts ] = useState([]);
+  const [searchedProduct, setsearchedproducts] = useState("");
 
   const getproducts = async()=>{
    const products = await axios.get("https://dummyjson.com/products")
-  //  console.log(products.data.products)
    setOurProducts(products.data.products)
   }
 
-  // console.log(ourProducts)
- 
 
   useEffect(()=>{
 
     getproducts()
-    // component did mount
  
   },[])
 
