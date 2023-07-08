@@ -1,31 +1,19 @@
-
 import Footer from "./Footer";
 import ProductCard from "./ProductCard";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import "./homePage.css"
 
-
+import "./homePage.css";
+import { useAPIFetch } from "../hooks/custom-hooks";
 
 const Featuredproducts = () => {
-  const [ ourProducts, setOurProducts ] = useState([]);
+  const { isLoading, ourProducts } = useAPIFetch(
+    "https://dummyjson.com/products"
+  );
 
-  const getproducts = async()=>{
-   const products = await axios.get("https://dummyjson.com/products")
-   setOurProducts(products.data.products)
-  }
+  const filteredProducts = ourProducts?.filter(
+    (product, index) => product.rating >= 4.5
+  );
 
-  useEffect(()=>{
-
-    getproducts()
- 
-  },[])
-
-
-  const filteredProducts = ourProducts.filter((product, index) => product.rating >= 4.5)
-
-
-  console.log(filteredProducts)
+  console.log(filteredProducts);
 
   return (
     <>
@@ -41,16 +29,32 @@ const Featuredproducts = () => {
         <h2>-- featured Products -- </h2>
       </div>
 
-      
-      <div style={{ display: "flex", flexWrap: "wrap", margin: 10, width : '100%', justifyContent : 'center' }}>
-        {filteredProducts.map((product, index) => (
-          <ProductCard key={product.id}  id={product.id} title={product.title} image={product.images[0]} description={product.description}/>
-        ))}
-      </div>
+      {isLoading ? (
+        <h5>Loading...</h5>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            margin: 10,
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
+          {filteredProducts.map((product, index) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              title={product.title}
+              image={product.images[0]}
+              description={product.description}
+            />
+          ))}
+        </div>
+      )}
       <Footer />
     </>
   );
 };
 
-
-export default Featuredproducts
+export default Featuredproducts;
